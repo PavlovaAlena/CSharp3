@@ -5,7 +5,9 @@ Console.Write("Введите число ");
 string? text = Console.ReadLine();
 
 if (text == null || text.Length != 5)
-{ Console.WriteLine("Число д.б. пятизначным!");}
+{
+    Console.WriteLine("Число д.б. пятизначным!");
+}
 else
 {
     char[] txet = text.ToCharArray();
