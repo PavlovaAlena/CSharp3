@@ -24,20 +24,27 @@ else
 } */
 
 //Второе решение
-int uinput = Convert.ToInt32((Console.ReadLine()));
+int num = Convert.ToInt32((Console.ReadLine()));
 int remainder = 0;
 int newnum = 0;
-for (int i = uinput; i > 0; i = (i / 10))
+if (num<10000 || num>=100000)
 {
-    remainder = i % 10;
-    newnum = (newnum*10) + remainder;
-}
-if (newnum == uinput)
-{
-    Console.WriteLine($"Число {uinput} является палиндромом");
+    Console.WriteLine("Число д.б. пятизначным!");
 }
 else
 {
-    Console.WriteLine($"Число {uinput} не является палиндромом");
+    for (int i = num; i > 0; i = (i / 10))
+    {
+        remainder = i % 10;
+        newnum = (newnum * 10) + remainder;
+    }
+    if (newnum == num)
+    {
+        Console.WriteLine($"Число {num} является палиндромом");
+    }
+    else
+    {
+        Console.WriteLine($"Число {num} не является палиндромом");
+    }
 }
 //Console.ReadKey();
